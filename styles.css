@@ -1,0 +1,233 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #6d9eeb 0%, #6d9eeb 100%);
+    min-height: 100vh;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+
+/* Background Animation */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
+    animation: backgroundShift 20s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes backgroundShift {
+    0%, 100% { transform: translateX(0) translateY(0); }
+    25% { transform: translateX(-20px) translateY(-10px); }
+    50% { transform: translateX(20px) translateY(10px); }
+    75% { transform: translateX(-10px) translateY(20px); }
+}
+
+/* Content */
+.content {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 60px 40px;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(255, 255, 255, 0.2);
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Logo Section */
+.logo-section {
+    margin-bottom: 40px;
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.logo-image {
+    width: 360px;
+    height: 360px;
+    object-fit: contain;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.company-name {
+    font-size: 48px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #6d9eeb, #6d9eeb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+}
+
+/* Coming Soon Section */
+.coming-soon-section {
+    margin-bottom: 50px;
+}
+
+.coming-soon-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+}
+
+.coming-soon-description {
+    font-size: 18px;
+    color: #718096;
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+.contact-section {
+    margin-bottom: 40px;
+}
+
+.contact-btn {
+    background: linear-gradient(135deg, #6d9eeb, #6d9eeb);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(109, 158, 235, 0.3);
+    margin-bottom: 16px;
+    text-decoration: none;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(109, 158, 235, 0.4);
+}
+
+.contact-btn:active {
+    transform: translateY(0);
+}
+
+.btn-icon {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.contact-btn:hover .btn-icon {
+    transform: translateX(4px);
+}
+
+.contact-subtitle {
+    font-size: 14px;
+    color: #a0aec0;
+    font-weight: 500;
+}
+
+/* Footer */
+.footer {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 20px;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #a0aec0;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        padding: 40px 30px;
+        margin: 20px;
+    }
+    
+    .company-name {
+        font-size: 36px;
+    }
+    
+    .coming-soon-title {
+        font-size: 28px;
+    }
+    
+    .coming-soon-description {
+        font-size: 16px;
+    }
+    
+    .contact-btn {
+        padding: 14px 28px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 30px 20px;
+    }
+    
+    .company-name {
+        font-size: 32px;
+    }
+    
+    .coming-soon-title {
+        font-size: 24px;
+    }
+    
+    .logo-image {
+        width: 300px;
+        height: 300px;
+    }
+}
