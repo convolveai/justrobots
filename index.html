@@ -3,45 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Just Robots - Coming Soon</title>
+    <title>Just Robots - Play with a Robot</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Chilanka&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="content">
-            <!-- Logo Section -->
-            <div class="logo-section">
-                <div class="logo">
-                    <img src="imgs/justrobots.svg" alt="Just Robots Logo" class="logo-image">
-                </div>
-                <h1 class="company-name">Just Robots</h1>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="imgs/logo.svg" alt="Just Robots Logo" class="logo-image">
+            </div>
+            <nav class="navigation">
+                <a href="#" class="nav-link active">Play with a Robot</a>
+                <a href="#" class="nav-link">Case Study</a>
+                <a href="#" class="nav-link">How it Works</a>
+                <a href="#" class="nav-link">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-container">
+            <!-- Left Column - Illustration -->
+            <div class="illustration-column">
+                <img src="imgs/illustration.svg" alt="Elderly person with robot" class="illustration-image">
             </div>
 
-            <!-- Coming Soon Section -->
-            <div class="coming-soon-section">
-                <h2 class="coming-soon-title">Coming Soon</h2>
-                <p class="coming-soon-description">
-                    We're working on something amazing. Stay tuned for updates and be the first to experience the future.
-                </p>
-            </div>
-
-            <!-- Contact Section -->
-            <div class="contact-section">
-                <a href="https://calendar.google.com/calendar/u/0/appointments/AcZssZ1EEd3Nb9NL18W29G2Bq6AnmnzQei5bLImsCkM=" target="_blank" class="contact-btn">
-                    <span class="btn-text">Book a Time</span>
-                    <span class="btn-icon">→</span>
-                </a>
-                <p class="contact-subtitle">Get in touch with our team</p>
-            </div>
-
-            <!-- Footer -->
-            <div class="footer">
-                <p>&copy; 2025 Just Robots. All rights reserved.</p>
+            <!-- Right Column - Text and Form -->
+            <div class="form-column">
+                <h1 class="headline">Helpful. Reliable. <span class="headline-brand">Just Robots.</span></h1>
+                <p class="body-text">We're working on something amazing. Stay tuned for updates and be the first to experience the future.</p>
+                <p class="cta-text">Would you like to be notified when a robot is ready for you to play with?</p>
+                
+                <form class="notification-form" id="notificationForm">
+                    <div class="form-group">
+                        <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Notify Me!</button>
+                </form>
             </div>
         </div>
-    </div>
+    </main>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; Just Robots 2025</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
