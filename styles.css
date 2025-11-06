@@ -172,11 +172,11 @@ body {
     padding: 14px 32px;
     border-radius: 6px;
     font-size: 16px;
-    font-weight: 600;
-    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    align-self: flex-start;
+    align-self: center;
 }
 
 .submit-btn:hover {
@@ -184,7 +184,7 @@ body {
     transform: translateY(-1px);
 }
 
-.submit-btn:active {
+.submit-btn:active {    
     transform: translateY(0);
 }
 
@@ -196,9 +196,10 @@ body {
 }
 
 .footer p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600; /* SemiBold */
     color: #000;
-    font-size: 14px;
-    font-weight: 400;
 }
 
 /* Responsive Design */
