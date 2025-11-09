@@ -266,3 +266,112 @@ body {
         max-width: 100%;
     }
 }
+
+/* Password Page Styles */
+.password-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E6F2FF;
+    padding: 20px;
+}
+
+.password-box {
+    background: #fff;
+    padding: 60px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+}
+
+.password-box .logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.password-box .logo-image {
+    height: 75px;
+    width: auto;
+}
+
+.password-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #0897E6;
+    margin-bottom: 12px;
+}
+
+.password-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.password-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.password-form .form-group {
+    width: 100%;
+}
+
+.password-form .form-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #000;
+    border-radius: 6px;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: border-color 0.3s ease;
+}
+
+.password-form .form-group input:focus {
+    outline: none;
+    border-color: #0066CC;
+}
+
+.password-form .submit-btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.error-message {
+    color: #d32f2f;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    margin-top: -10px;
+    display: none;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 480px) {
+    .password-box {
+        padding: 40px 30px;
+    }
+
+    .password-title {
+        font-size: 28px;
+    }
+
+    .password-subtitle {
+        font-size: 14px;
+    }
+
+    .password-form .form-group input {
+        font-size: 16px;
+        padding: 12px 14px;
+    }
+}

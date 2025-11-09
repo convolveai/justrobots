@@ -56,5 +56,11 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Check authentication before showing the page
+        if (sessionStorage.getItem('authenticated') !== 'true') {
+            window.location.href = 'password.html';
+        }
+    </script>
 </body>
 </html>
