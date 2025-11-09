@@ -37,14 +37,19 @@
                 <p class="body-text">We're working on something amazing. Stay tuned for updates and be the first to experience the future.</p>
                 <p class="cta-text">Would you like to be notified when a robot is ready for you to play with?</p>
                 
-                <form class="notification-form" id="notificationForm">
+                <!-- Replace YOUR_FORM_ID with your actual Formspree form ID from your Formspree dashboard -->
+                <form class="notification-form" id="notificationForm" action="https://formspree.io/f/mzzypapr" method="POST">
                     <div class="form-group">
-                        <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
+                        <input type="text" id="fullName" name="name" placeholder="Full Name" required>
                     </div>
                     <div class="form-group">
                         <input type="email" id="email" name="email" placeholder="Email" required>
                     </div>
-                    <button type="submit" class="submit-btn">Notify Me!</button>
+                    <div id="formMessage" class="form-message"></div>
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <span id="submitBtnText">Notify Me!</span>
+                        <span id="submitBtnLoader" class="btn-loader" style="display: none;">Sending...</span>
+                    </button>
                 </form>
             </div>
         </div>
