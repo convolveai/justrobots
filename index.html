@@ -15,10 +15,11 @@
                 <img src="imgs/logo.svg" alt="Just Robots Logo" class="logo-image">
             </div>
             <nav class="navigation">
-                <a href="#" class="nav-link active">Play with a Robot</a>
-                <a href="#" class="nav-link">Case Study</a>
-                <a href="#" class="nav-link">How it Works</a>
-                <a href="#" class="nav-link">Contact Us</a>
+                <a href="https://go2telepresence.web.app/login" class="nav-link" target="_blank" rel="noopener noreferrer">Play with a Robot</a>
+                <a href="#about-us" class="nav-link">About Us</a>
+                <!-- <a href="#" class="nav-link">Case Study</a>
+                <a href="#" class="nav-link">How it Works</a> -->
+                <a href="#contact-us" class="nav-link">Contact Us</a>
             </nav>
         </div>
     </header>
@@ -32,7 +33,7 @@
             </div>
 
             <!-- Right Column - Text and Form -->
-            <div class="form-column">
+            <div id="contact-us" class="form-column">
                 <h1 class="headline">Helpful. Reliable. <span class="headline-brand">Just Robots.</span></h1>
                 <p class="body-text">We're working on something amazing. Stay tuned for updates and be the first to experience the future.</p>
                 <p class="cta-text">Would you like to be notified when a robot is ready for you to play with?</p>
@@ -55,17 +56,29 @@
         </div>
     </main>
 
+    <div class="section-break" aria-hidden="true"></div>
+
+    <!-- About Us / Banner -->
+    <section id="about-us" class="banner" aria-label="About Just Robots">
+        <h2 class="section-title">About Us</h2>
+        <div class="banner-container">
+            <img src="imgs/banner.png" alt="How will you use your robot? Robots built for humans that connect us, socialize and play with us, empower us, and free up our time." class="banner-image">
+        </div>
+    </section>
+
+    <div class="section-break section-break--footer" aria-hidden="true"></div>
+
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; Just Robots 2025</p>
+        <div class="footer-container">
+            <p class="footer-contact">
+                Contact us:
+                <a href="mailto:humans@just-robots.com" class="footer-email">humans@just-robots.com</a>
+            </p>
+            <p class="footer-copyright">&copy; Just Robots 2025</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        // Check authentication before showing the page
-        if (sessionStorage.getItem('authenticated') !== 'true') {
-            window.location.href = 'password.html';
-        }
-    </script>
 </body>
 </html>

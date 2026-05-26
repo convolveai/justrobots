@@ -87,13 +87,22 @@ document.addEventListener('DOMContentLoaded', function() {
         formMessage.textContent = '';
     }
     
-    // Smooth scroll for navigation links
+    // In-page nav: smooth scroll and active state
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            // Remove active class from all links
+            const href = this.getAttribute('href');
+            if (!href || !href.startsWith('#') || href === '#') {
+                return;
+            }
+
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
             navLinks.forEach(l => l.classList.remove('active'));
-            // Add active class to clicked link
             this.classList.add('active');
         });
     });
